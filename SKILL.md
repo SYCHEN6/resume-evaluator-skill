@@ -1,6 +1,6 @@
 ---
 name: resume-evaluator
-description: Analyze a job description (JD) and evaluate a candidate's resume (PDF or text), producing a structured match score, gap analysis, and concrete rewrite guidance with before/after examples. Use this skill whenever the user wants to improve their resume, tailor it for a specific job posting, get gap analysis against a JD, find missing keywords, quantify their achievements, or understand why they might not be getting callbacks. Trigger even if the user just says "help me with my resume" or shares a job ad alongside a file — they almost certainly want this analysis. Works for Chinese and English resumes and JDs. Always outputs the evaluation report in Chinese. Designed for experienced hires (3+ years of work experience); not suitable for fresh graduates or campus recruiting.
+description: Analyze a job description (JD) and evaluate a candidate's resume (PDF or text), producing a structured match score, gap analysis, and concrete rewrite guidance with before/after examples. Use this skill whenever the user wants to improve their resume, tailor it for a specific job posting, get gap analysis against a JD, find missing keywords, quantify their achievements, or understand why they might not be getting callbacks. Trigger even if the user just says "help me with my resume" or shares a job ad alongside a file — they almost certainly want this analysis. Works for Chinese and English resumes and JDs. Always outputs the evaluation report in Chinese. Designed for experienced hires in software development roles (社招); not suitable for fresh graduates or campus recruiting.
 ---
 
 # Resume Evaluator — JD-Driven Resume Analysis
@@ -141,7 +141,7 @@ Generate 5 question categories, **2 questions each** (do not pad to 3). After th
 ## Edge Cases
 
 - **英文JD**：报告用中文；🟢 关键词补充直接给英文原词（用于ATS插入）。中文简历投英文JD需提示语言不匹配。
-- **应届生/校招**：告知本工具适用于3年以上工作经验的社招场景，评估结论对应届生参考价值有限，建议换用针对校招的评估方式。
+- **应届生/校招**：告知本工具适用于社招开发类岗位，评估逻辑以工作经历为核心，对应届生参考价值有限，建议换用针对校招的评估方式。
 - **简历内容稀薄**：注明缺少哪些板块，指出该岗位面试官最看重什么。
 - **只提供JD无简历**：告知"需要简历才能评估"，不做分析。
 - **用户只看某一项**：优先满足，但其他板块有明显问题时主动提醒。
