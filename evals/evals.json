@@ -1,0 +1,141 @@
+{
+  "skill_name": "resume-evaluator",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "帮我评估一下我的简历和这个JD的匹配程度，给出优化建议。\n\n---\n【职位描述 JD】\n岗位：Java高级开发工程师\n公司：某国有银行股份有限公司信息科技部\n\n岗位职责：\n1. 负责核心银行系统的后端开发和维护，包括账务、清算、贷款等模块；\n2. 参与微服务架构的设计与落地，推进系统解耦和性能优化；\n3. 配合业务部门进行需求分析，输出技术方案并推动实施；\n4. 处理生产环境问题，制定故障预案和技术规范；\n5. 参与代码评审，提升团队代码质量。\n\n任职要求：\n- 计算机或相关专业本科及以上学历；\n- 5年以上Java开发经验，熟悉Spring Boot、Spring Cloud等主流框架；\n- 熟悉分布式系统设计，掌握RabbitMQ/Kafka等消息队列；\n- 熟悉MySQL数据库调优及Redis缓存技术；\n- 了解金融业务，有银行或金融科技行业经验者优先；\n- 熟悉容器化部署（Docker/Kubernetes）者优先；\n- 具备较强的文档编写能力，能输出清晰的技术方案。\n\n---\n【我的简历】\n姓名：张明\n学历：本科，软件工程，江苏大学，2019年毕业\n工作年限：5年\n\n工作经历：\n2022.06 – 至今  某互联网金融公司  高级Java工程师\n- 负责贷款撮合平台的后端开发，主要技术栈：Spring Boot、MyBatis、MySQL\n- 设计并实现了基于Kafka的异步通知系统，日均消息量约50万条\n- 主导用户账户模块重构，接口响应时间从800ms降低至200ms以内\n- 参与系统容量评估和压测方案制定\n\n2019.07 – 2022.05  某互联网公司  Java开发工程师\n- 参与电商订单系统开发，使用Spring Boot + Redis处理高并发场景\n- 负责MySQL数据库索引优化和慢查询治理\n- 独立完成三方支付接口对接工作\n\n技能：Java、Spring Boot、Spring MVC、MyBatis、MySQL、Redis、Kafka、Git、Linux基本操作\n\n教育背景：江苏大学 软件工程 本科 2019年",
+      "expected_output": "生成一份中文评估报告，包含：综合评分（预计70-80分），各维度评分，亮点（5年经验、Kafka、MySQL优化、金融场景），差距分析（缺Spring Cloud、缺K8s/Docker），以及具体的优化建议。",
+      "files": [],
+      "assertions": [
+        {
+          "id": "numeric-score",
+          "text": "Report contains a numeric overall score out of 100 (e.g., '75/100' or '综合评分：75')"
+        },
+        {
+          "id": "identifies-spring-cloud-gap",
+          "text": "Report identifies Spring Cloud as a skill gap or missing requirement"
+        },
+        {
+          "id": "identifies-k8s-gap",
+          "text": "Report identifies Docker or Kubernetes as a gap"
+        },
+        {
+          "id": "chinese-output",
+          "text": "Report is written primarily in Chinese (not English)"
+        },
+        {
+          "id": "structured-sections",
+          "text": "Report contains distinct sections for strengths (亮点), gaps (差距), and suggestions (建议/优化)"
+        },
+        {
+          "id": "specific-suggestions",
+          "text": "Optimization suggestions include at least one concrete, specific action (not vague advice like '丰富内容')"
+        },
+        {
+          "id": "offers-revised-resume",
+          "text": "Report ends with an offer to generate a revised resume (e.g., asks if the user wants a modified version produced)"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "我是做Python开发的，想转型做Agent应用工程师，下面是JD和我的简历，帮我看看差距在哪，怎么改简历。\n\n---\n【职位描述 JD】\n岗位：Agent应用工程师（大模型方向）\n公司：某AI科技公司（独角兽，B轮）\n\n岗位职责：\n1. 负责基于大语言模型的智能Agent系统设计与开发，包括工具调用、记忆管理、多步推理链路等；\n2. 调研并集成LangChain、LlamaIndex、AutoGPT等主流Agent框架，搭建灵活可扩展的Agent底座；\n3. 设计Prompt工程策略，优化模型输出质量和稳定性；\n4. 与产品经理协作，将业务需求拆解为Agent工作流，快速迭代交付；\n5. 建立Agent性能评估体系，包括准确率、延迟、幻觉率等核心指标监控。\n\n任职要求：\n- 3年以上Python开发经验；\n- 熟悉至少一种主流Agent框架（LangChain / LlamaIndex / AutoGen等）；\n- 有LLM API调用经验（OpenAI / Claude / 国内主流大模型），理解RAG原理；\n- 有Prompt Engineering实践经验；\n- 熟悉向量数据库（Pinecone / Milvus / Chroma等）者优先；\n- 有AI产品落地经验（从原型到线上）者加分。\n\n---\n【我的简历】\n姓名：李雪\n学历：硕士，计算机科学，中山大学，2021年毕业\n工作年限：4年（含读研期间实习1年）\n\n工作经历：\n2021.07 – 至今  某数据服务公司  Python开发工程师（数据平台方向）\n- 负责ETL数据管道开发，使用Airflow调度，日均处理数据量约2TB\n- 开发内部数据质量检测工具，支持100+业务表自动化巡检\n- 基于FastAPI搭建数据服务API，对接10+下游业务系统\n- 维护公司内部知识检索系统（基于Elasticsearch），近期迁移至向量检索（使用Milvus + text-embedding-ada-002）\n\n技能：Python、Pandas、FastAPI、Airflow、MySQL、Elasticsearch、Milvus、Docker、Git\n\n个人项目（业余）：\n- 用LangChain搭建了一个本地知识库问答机器人，使用Ollama运行本地Llama3，接入Milvus做向量检索（GitHub: 有仓库，未公开）\n\n教育背景：中山大学 计算机科学 硕士 2021年",
+      "expected_output": "生成一份中文评估报告：差距分析重点：工作经历中LangChain/Agent经验只在个人项目中出现、没有Prompt Engineering经验、没有RAG正式落地。优化建议：把个人项目写进简历并量化；将Milvus迁移经历重新描述为RAG原型落地。",
+      "files": [],
+      "assertions": [
+        {
+          "id": "numeric-score",
+          "text": "Report contains a numeric overall score out of 100"
+        },
+        {
+          "id": "career-pivot-acknowledged",
+          "text": "Report explicitly acknowledges the career pivot / transition context and addresses it"
+        },
+        {
+          "id": "langchain-project-recognized",
+          "text": "Report recognizes the personal LangChain project as a positive signal or strength"
+        },
+        {
+          "id": "production-llm-gap",
+          "text": "Report flags the lack of production-level LLM or Agent experience in formal work history"
+        },
+        {
+          "id": "milvus-reframe-suggestion",
+          "text": "Report suggests reframing or expanding the Milvus/vector search experience as RAG-related"
+        },
+        {
+          "id": "chinese-output",
+          "text": "Report is written primarily in Chinese"
+        },
+        {
+          "id": "offers-revised-resume",
+          "text": "Report ends with an offer to generate a revised resume"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "I want to apply for this position at a foreign company. Here's the JD (in English) and my resume. Please evaluate the match and give me suggestions to improve my resume.\n\n---\n[Job Description]\nPosition: Senior LLM Application Engineer\nCompany: TechCorp Asia (US-headquartered SaaS company, Asia Pacific R&D Center)\n\nResponsibilities:\n- Design and implement production-grade LLM-powered features including summarization, classification, entity extraction, and Q&A systems\n- Build and maintain LLM evaluation pipelines; define metrics and run A/B tests to measure quality improvements\n- Collaborate with ML researchers to deploy fine-tuned models and integrate them into product workflows\n- Optimize prompts and system instructions for reliability, cost-efficiency, and latency\n- Contribute to internal tooling for prompt versioning, experiment tracking, and model observability\n\nRequirements:\n- 3+ years of software engineering experience, with at least 1 year working directly with LLMs in production\n- Proficiency in Python; experience with LLM APIs (OpenAI, Anthropic, Google Gemini, or equivalent)\n- Hands-on experience with RAG architectures, vector databases, and embedding models\n- Familiarity with prompt engineering techniques (chain-of-thought, few-shot, function calling)\n- Experience with evaluation frameworks (e.g., RAGAS, DeepEval, LangSmith) is a strong plus\n- Strong written and verbal English communication skills\n- Experience with MLflow, Weights & Biases, or similar experiment tracking tools is a plus\n\n---\n[My Resume]\nName: Wang Fang\nEducation: M.S. Computer Science, Tsinghua University, 2020\nYears of Experience: 5 years\n\nWork Experience:\n2022.03 – Present  ByteDance  NLP Algorithm Engineer\n- Led development of a text classification system for content moderation, processing 50M+ posts/day\n- Built an internal prompt management platform supporting 200+ prompt templates across 5 product lines\n- Integrated GPT-4 and Claude APIs to power AI writing assistant feature (launched Q3 2023, MAU 800K)\n- Fine-tuned domain-specific embedding models for Chinese-language semantic search\n- Conducted A/B testing for model updates; reduced hallucination rate by ~18% through prompt optimization\n\n2020.07 – 2022.02  Tencent  Backend Engineer (Search & Recommendation)\n- Developed backend services for content recommendation using Python + FastAPI\n- Maintained Elasticsearch-based full-text search and began transitioning to vector search using Faiss\n\nSkills: Python, PyTorch, HuggingFace, LangChain, FastAPI, Elasticsearch, Faiss, GPT-4 API, Claude API, MLflow, Git\n\nLanguages: Chinese (native), English (CET-6, professional working proficiency)",
+      "expected_output": "Generate an English evaluation report. Overall score should be high (75-85). Key gaps: no RAGAS/DeepEval/LangSmith, limited RAG framing. Strengths: real production LLM deployment (800K MAU), prompt management platform, A/B testing. Keyword gaps: RAG, vector database, chain-of-thought, function calling.",
+      "files": [],
+      "assertions": [
+        {
+          "id": "chinese-output",
+          "text": "Report is written in Chinese, regardless of JD/resume language (skill always outputs Chinese)"
+        },
+        {
+          "id": "numeric-score",
+          "text": "Report contains a numeric overall score out of 100"
+        },
+        {
+          "id": "eval-framework-gap",
+          "text": "Report identifies missing experience with LLM evaluation frameworks (RAGAS, DeepEval, LangSmith, or similar)"
+        },
+        {
+          "id": "rag-reframe-suggestion",
+          "text": "Report suggests reframing the Faiss/vector search experience as RAG architecture experience"
+        },
+        {
+          "id": "keyword-list",
+          "text": "Report includes a list of keywords to add for ATS optimization"
+        },
+        {
+          "id": "dimension-scores",
+          "text": "Report includes per-dimension scores (not just overall score)"
+        },
+        {
+          "id": "offers-revised-resume",
+          "text": "Report ends with an offer to generate a revised resume"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "帮我评估一下我的简历和这个JD的匹配程度，评估完成后直接帮我生成一份修改后的完整简历。\n\n---\n【职位描述 JD】\n岗位：Java高级开发工程师\n公司：某国有银行股份有限公司信息科技部\n\n岗位职责：\n1. 负责核心银行系统的后端开发和维护，包括账务、清算、贷款等模块；\n2. 参与微服务架构的设计与落地，推进系统解耦和性能优化；\n3. 配合业务部门进行需求分析，输出技术方案并推动实施；\n4. 处理生产环境问题，制定故障预案和技术规范；\n5. 参与代码评审，提升团队代码质量。\n\n任职要求：\n- 计算机或相关专业本科及以上学历；\n- 5年以上Java开发经验，熟悉Spring Boot、Spring Cloud等主流框架；\n- 熟悉分布式系统设计，掌握RabbitMQ/Kafka等消息队列；\n- 熟悉MySQL数据库调优及Redis缓存技术；\n- 了解金融业务，有银行或金融科技行业经验者优先；\n- 熟悉容器化部署（Docker/Kubernetes）者优先；\n- 具备较强的文档编写能力，能输出清晰的技术方案。\n\n---\n【我的简历】\n姓名：张明\n学历：本科，软件工程，江苏大学，2019年毕业\n工作年限：5年\n\n工作经历：\n2022.06 – 至今  某互联网金融公司  高级Java工程师\n- 负责贷款撮合平台的后端开发，主要技术栈：Spring Boot、MyBatis、MySQL\n- 设计并实现了基于Kafka的异步通知系统，日均消息量约50万条\n- 主导用户账户模块重构，接口响应时间从800ms降低至200ms以内\n- 参与系统容量评估和压测方案制定\n\n2019.07 – 2022.05  某互联网公司  Java开发工程师\n- 参与电商订单系统开发，使用Spring Boot + Redis处理高并发场景\n- 负责MySQL数据库索引优化和慢查询治理\n- 独立完成三方支付接口对接工作\n\n技能：Java、Spring Boot、Spring MVC、MyBatis、MySQL、Redis、Kafka、Git、Linux基本操作\n\n教育背景：江苏大学 软件工程 本科 2019年",
+      "expected_output": "Two-part output: (1) full evaluation report in Chinese with score, strengths, gaps, and before/after rewrites; (2) a complete revised resume in Markdown with a 修改说明 header block and all mandatory changes applied — especially Spring Cloud added to skills and work experience reframed to include microservice architecture language.",
+      "files": [],
+      "assertions": [
+        {
+          "id": "evaluation-report-present",
+          "text": "Response includes a full evaluation report with numeric score and dimension breakdown"
+        },
+        {
+          "id": "revised-resume-generated",
+          "text": "Response includes a complete revised resume (not just a diff), as a standalone document"
+        },
+        {
+          "id": "spring-cloud-added-to-revision",
+          "text": "The revised resume adds Spring Cloud (or specific components like Nacos/Feign) to the skills section or work experience"
+        },
+        {
+          "id": "xiugai-shuoming-block",
+          "text": "The revised resume includes a 修改说明 block listing what was changed"
+        },
+        {
+          "id": "no-fabricated-numbers",
+          "text": "The revised resume does not invent specific metrics not present in the original — placeholders like [待补充] are used where specific numbers are unknown"
+        }
+      ]
+    }
+  ]
+}
